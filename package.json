@@ -1,0 +1,39 @@
+{
+  "name": "coffeeflow-microservices",
+  "version": "0.0.0",
+  "private": true,
+  "description": "NestJS microservices training lab: Gateway, Identity, Catalog, Orders, Notifications and Analytics",
+  "scripts": {
+    "build": "tsc -p apps/gateway/tsconfig.app.json",
+    "format": "prettier --write apps/**/*.ts",
+    "format:check": "prettier --check apps/**/*.ts",
+    "lint:check": "eslint \"apps/**/*.ts\"",
+    "test:unit": "jest --runInBand",
+    "test": "npm run test:unit",
+    "start:gateway": "node dist/apps/gateway/main.js"
+  },
+  "dependencies": {
+    "@nestjs/common": "^11.1.0",
+    "@nestjs/core": "^11.1.0",
+    "@nestjs/platform-express": "^11.1.0",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.2"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "^11.0.0",
+    "@nestjs/schematics": "^11.0.0",
+    "@nestjs/testing": "^11.1.0",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.15.0",
+    "@typescript-eslint/eslint-plugin": "^8.34.0",
+    "@typescript-eslint/parser": "^8.34.0",
+    "eslint": "^8.57.1",
+    "jest": "^29.7.0",
+    "prettier": "^3.5.3",
+    "ts-jest": "^29.2.5",
+    "typescript": "~5.8.3"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  }
+}
